@@ -1,8 +1,11 @@
+LoanWise - Verify Eligibility with Confidence
+
+
 Create and Active Virtual Enviorment 
 location>   python -m venv myenv
 location>   myenv\scripts\activate
 deactivate: deactive
-#Open Apps in Streamlit    streamlit run testing.py
+#Open Apps in Streamlit    streamlit run loan-prediction_app.py
 
 Virtual Enviorment & Install or create requirements.txt watch this: https://youtu.be/9a1NDDcDQ7c
 
