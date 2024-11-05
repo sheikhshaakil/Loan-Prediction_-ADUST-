@@ -21,16 +21,18 @@ col1, col2 = st.columns([1, 2])
 
 # Left column: Display the logo
 with col1:
-    st.image(logo, caption="", width=200)
+    st.image(logo, caption="", width=220)
 
 # Right column: Display the personal information, left-aligned
 with col2:
     st.markdown(
         """
         <div style="text-align: right;">
-            <b style="font-size: 30px"> Md. Shakil Sheikh</b>
-            <p>Department of CSE, ADUST</p>
-            <p>ID: 213-0001-203</p>
+            <b style="font-size: 28px"> MD. SHAKIL SHEIKH</b>
+            <p>Department of CSE, <b>ADUST</b> <br> <b>ID: 213-0001-203</b></p>
+            <b style="font-size: 22px"> Project Name:</b>
+            <br>
+            <p> <b>LoanWise:</b> The Future of Loan Eligibility Verification</p>
         </div>
         """,
         unsafe_allow_html=True
@@ -38,6 +40,11 @@ with col2:
 
 
 st.write('---')
+
+
+
+
+
 
 #st.title('LoanWise')
 st.subheader('Enter Applicant Details:')
@@ -105,7 +112,7 @@ input_mapping = {
 
 
 # Make prediction
-if st.button("Predict"):
+if st.button("Check Your Loan Status", use_container_width=True):
     # Convert user inputs to numerical values using the mapping
     input_data = [
         input_mapping["Gender"][Gender],
@@ -126,11 +133,15 @@ if st.button("Predict"):
     
     
     if prediction == 0:
-        st.write(f"Hello {full_name} and account number: {account_number}")
-        st.write("Loan Prediction: Rejected")
+        st.subheader(f"Hello, {full_name}")
+        st.write(f"Account Number: :blue-background[{account_number}]")
+        st.header(":red[We’re sorry!]")
+        st.write("Unfortunately, you are not eligible for a loan at this time.")
     else:
-        st.write(f"Hello {full_name} and account number: {account_number}")
-        st.write("Loan Prediction: Approved")
+        st.subheader(f"Hello, {full_name}")
+        st.write(f"Account Number: :blue-background[{account_number}]")
+        st.header(":green[Congratulations!!]")
+        st.write("Based on our assessment, you meet the loan eligibility criteria.")
         
         
         
@@ -141,24 +152,16 @@ st.write('---')
 st.write('')       
 
 with st.container():
-    right_column, left_column = st.columns(2)
+    left_column, right_column = st.columns(2)
     with right_column:
 
-        st.write('_For any issue contact me via :_')
-        st.info('[LinkedIn](https://www.linkedin.com/in/sheikh-shakil/)', icon="📩")
-        st.info('[Whatsapp](https://wa.me/+8801601122081)', icon="📲")
+        st.write('For inquiries or issues, reach me at:')
+        st.info('[Visit My Website](https://sites.google.com/view/sheikhshakil)', icon="🔗")
+        st.info('[Message on WhatsApp](https://wa.me/+8801601122081)', icon="📞")
 
     with left_column:
         st_lottie(animation_contact, speed=1, height=200, key="third")  
-        
-        
-        
-        
-        
-        
-        
-        
-        
+            
         
         
         

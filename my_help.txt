@@ -1,4 +1,5 @@
-LoanWise - Verify Eligibility with Confidence
+Project Title: LoanWise: The Future of Loan Eligibility Verification
+Apps: LoanWise - Verify Eligibility with Confidence
 
 
 Create and Active Virtual Enviorment 
