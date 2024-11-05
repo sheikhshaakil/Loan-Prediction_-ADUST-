@@ -59,7 +59,6 @@ st.write('---')
 
 
 
-
 # lottie_link = "https://assets8.lottiefiles.com/packages/lf20_4wDd2K.json"
 # animation = load_lottie(lottie_link)
 # animation_contact = load_lottie("https://assets4.lottiefiles.com/packages/lf20_mwawjro9.json")
