@@ -3,7 +3,7 @@
 import streamlit as st
 import requests
 import pickle
-from streamlit_lottie import st_lottie
+# from streamlit_lottie import st_lottie
 import joblib
 import numpy as np
 from PIL import Image
@@ -49,19 +49,19 @@ st.write('---')
 #st.title('LoanWise')
 st.subheader('Enter Applicant Details:')
 
-# For Animations
+# # For Animations
 
-def load_lottie(url):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
+# def load_lottie(url):
+#     r = requests.get(url)
+#     if r.status_code != 200:
+#         return None
+#     return r.json()
 
 
 
-lottie_link = "https://assets8.lottiefiles.com/packages/lf20_4wDd2K.json"
-animation = load_lottie(lottie_link)
-animation_contact = load_lottie("https://assets4.lottiefiles.com/packages/lf20_mwawjro9.json")
+# lottie_link = "https://assets8.lottiefiles.com/packages/lf20_4wDd2K.json"
+# animation = load_lottie(lottie_link)
+# animation_contact = load_lottie("https://assets4.lottiefiles.com/packages/lf20_mwawjro9.json")
 
 
 
@@ -150,16 +150,16 @@ if st.button("Check Your Loan Status", use_container_width=True):
 st.write('---')
 st.write('')       
 
-with st.container():
-    left_column, right_column = st.columns(2)
-    with right_column:
+# with st.container():
+#     left_column, right_column = st.columns(2)
+#     with right_column:
 
-        st.write('For inquiries or issues, reach me at:')
-        st.info('[Visit My Website](https://sites.google.com/view/sheikhshakil)', icon="🔗")
-        st.info('[Message on WhatsApp](https://wa.me/+8801601122081)', icon="📞")
+#         st.write('For inquiries or issues, reach me at:')
+#         st.info('[Visit My Website](https://sites.google.com/view/sheikhshakil)', icon="🔗")
+#         st.info('[Message on WhatsApp](https://wa.me/+8801601122081)', icon="📞")
 
-    with left_column:
-        st_lottie(animation_contact, speed=1, height=200, key="third")  
+#     with left_column:
+#         st_lottie(animation_contact, speed=1, height=200, key="third")  
             
         
         
