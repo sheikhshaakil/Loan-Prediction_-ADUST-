@@ -1,0 +1,94 @@
+/* General page styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center container */
+#app-container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Headers */
+h1 {
+    color: #1f77b4;
+    text-align: center;
+    font-size: 2em;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #fafafa;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    outline: none;
+    border: 1px solid #1f77b4;
+    background-color: #fff;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1em;
+    color: #fff;
+    background-color: #1f77b4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #00509d;
+}
+
+/* Result container */
+#output-container {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f7faff;
+    border: 1px solid #e1ecf4;
+}
+
+.result-header {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.result-success {
+    color: #28a745;
+}
+
+.result-fail {
+    color: #dc3545;
+}
+
+/* Styling for account number and name display */
+#output-container .account-number {
+    font-weight: bold;
+    color: #00509d;
+    display: inline-block;
+    margin-top: 10px;
+}
