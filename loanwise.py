@@ -54,7 +54,7 @@ st.logo(
 
 
 
-# Load the trained model
+#Load the trained model
 file = "loan_predition_model_LR.pkl"
 with open(file, 'rb') as f:
     model = pickle.load(f)
@@ -121,97 +121,61 @@ if st.button("Check Your Loan Status", use_container_width=True):
         st.write("Based on our assessment, you meet the loan eligibility criteria.")
         
         
-        
-        
-        
-        
+           
 st.write('---')
 st.write('')     
 
 
-  
 
-# # Divide the layout into two columns
-# left_col, right_col = st.columns([1, 2])
+    
+    # Divide the layout into three columns
+left_col, middle_col, right_col = st.columns([1, 1, 1])
 
-# # Left column: Display your photo
-# with left_col:
-#     st.image("./img/ShakilPortrait.jpg", width=150)  # Replace "your_photo.jpg" with your actual photo file path
-#     st.write("Sheikh Shakil")  # Optional: Display your name below the photo
+# Left column: Display your photo
+with left_col:
+    st.image("./img/ShakilPortrait.jpg", width=120)  # Replace "your_photo.jpg" with the path to your photo
+    st.write("&copy; Sheikh Shakil")  # Optional: Display your name below the photo
 
-# # Right column: LinkedIn and WhatsApp links
-# with right_col:
-#     st.write("## Connect with me")
-    
-#     # LinkedIn link
-#     linkedin_url = "https://www.linkedin.com/in/your-linkedin-profile"  # Replace with your LinkedIn profile link
-#     st.markdown(f"[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)]({linkedin_url})")
-    
-#     # WhatsApp link
-#     whatsapp_number = "your_phone_number"  # Replace with your WhatsApp phone number
-#     whatsapp_url = f"https://wa.me/{whatsapp_number}"  # Generates a direct link to WhatsApp
-#     st.markdown(f"[![WhatsApp](https://img.shields.io/badge/WhatsApp-Message-green)]({whatsapp_url})")
-    
-    
-    
+# Middle column: LinkedIn link
+with middle_col:
+    st.write("Connect with me on LinkedIn for collaboration & networking.")
+    linkedin_url = "https://www.linkedin.com/in/sheikh-shakil/"  # Replace with your LinkedIn profile link
+    st.markdown(f"[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)]({linkedin_url})")
+
+# Right column: WhatsApp link
+with right_col:
+    st.write("Contact me on WhatsApp for any questions or assistance.")
+    whatsapp_number = "+8801601122081"  # Replace with your WhatsApp number
+    whatsapp_url = f"https://wa.me/+8801601122081"  # Creates a direct link to WhatsApp
+    st.markdown(f"[![WhatsApp](https://img.shields.io/badge/WhatsApp-Message-green)]({whatsapp_url})")
         
-        
-footer="""<style>
-header {visibility: hidden;}
-
-/* Light mode styles */
-p {
-  color: black;
-}
-
-/* Dark mode styles */
-@media (prefers-color-scheme: dark) {
-  p {
-    color: white;
-  }
-}
-
-a:link , a:visited{
-color: #5C5CFF;
-background-color: transparent;
-text-decoration: none;
-}
-
-a:hover,  a:active {
-color: red;
-background-color: transparent;
-text-decoration: underline;
-}
-
-:root {
-  --footer-bg-color: #333;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --footer-bg-color: rgb(14, 17, 23);
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --footer-bg-color: white;
-  }
-}
-
-.footer {
-position: fixed;
-left: 0;
-bottom: 0;
-width: 100%;
-background-color: var(--footer-bg-color);
-color: black;
-text-align: center;
-}
-
-</style>
-<div class="footer">
-<p>&copy; 2024 <a href="https://www.facebook.com/sheikhshaakil"> Sheikh Shakil,</a> All Rights Reserved.</p>
-</div>
-"""
-st.markdown(footer,unsafe_allow_html=True)
+ 
+ 
+ 
+ # Custom CSS for the footer styling
+st.markdown("""
+    <style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #f1f1f1;  /* Light background color */
+        color: #333333;  /* Text color */
+        text-align: center;
+        padding: 10px 0;
+        font-size: 14px;
+    }
+    .footer a {
+        color: #0072b1;  /* Link color */
+        text-decoration: none;
+    }
+    .footer a:hover {
+        text-decoration: underline;  /* Underline on hover for emphasis */
+    }
+    </style>
+    
+    <div class="footer">
+        <p>&copy; 2024 <a href="https://www.facebook.com/sheikhshaakil" target="_blank">Sheikh Shakil</a>, All Rights Reserved.</p>
+    </div>
+    """, unsafe_allow_html=True)
