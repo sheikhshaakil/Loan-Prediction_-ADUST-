@@ -4,7 +4,7 @@
 # **LoanWise:** The Future of Loan Eligibility Verification
 LoanWise is a streamlined web app that predicts an applicant's loan eligibility based on provided financial and personal details. The app leverages machine learning to analyze multiple parameters, ensuring accurate and reliable loan eligibility assessments.
 
-## Features:-
+## Features
 - **User-Friendly Interface:** Designed for ease of use with clear instructions and tooltips.
 - **Data-Driven Predictions:** Uses machine learning to evaluate loan eligibility accurately.
 - **Streamlined Process:** Supports various input fields like Applicant Income, Loan Amount, and more.
