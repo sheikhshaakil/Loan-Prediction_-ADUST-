@@ -38,40 +38,10 @@ with col2:
         unsafe_allow_html=True
     )
 
-
 st.write('---')
-
-
-
-
-
 
 #st.title('LoanWise')
 st.subheader('Enter Applicant Details:')
-
-# # For Animations
-
-# def load_lottie(url):
-#     r = requests.get(url)
-#     if r.status_code != 200:
-#         return None
-#     return r.json()
-
-
-
-# lottie_link = "https://assets8.lottiefiles.com/packages/lf20_4wDd2K.json"
-# animation = load_lottie(lottie_link)
-# animation_contact = load_lottie("https://assets4.lottiefiles.com/packages/lf20_mwawjro9.json")
-
-
-
-
-
-# Load the trained model
-file = "loan_predition_model_LR.pkl"
-with open(file, 'rb') as f:
-    model = pickle.load(f)
-
 
 #Logo as Header
 st.logo("./img/LoanWise-Icon.png")
@@ -82,28 +52,37 @@ st.logo(
     icon_image="./img/LoanWise-Icon.png"
 )
 
-#Input things
 
-account_number = st.text_input("Account Number")
-full_name = st.text_input("Full Name")
-Gender = st.selectbox("Gender", ["Male", "Female"])
-Married = st.selectbox("Married", ["Yes", "No"])
-Dependents = st.selectbox("Dependents", ["0", "1", "2", "3+"], format_func=lambda x: x.replace("3+", "3 or more"))
-Education = st.selectbox("Education", ["Graduate", "Not Graduate"])
-Self_Employed = st.selectbox("Self_Employed", ["Yes", "No"])
-ApplicantIncome = st.number_input("ApplicantIncome($)", min_value=0)
-CoapplicantIncome = st.number_input("CoapplicantIncome($)", min_value=0.0)
-LoanAmount = st.number_input("LoanAmount($)", min_value=0.0)
-Loan_Amount_Term = st.number_input("Loan Amount Term(Month)", min_value=0.0)
-Credit_History = st.selectbox("Credit_History*", [0.0, 1.0])
-Property_Area = st.selectbox("Property_Area", ["Urban", "Rural", "Semiurban"])
+
+
+# Load the trained model
+file = "loan_predition_model_LR.pkl"
+with open(file, 'rb') as f:
+    model = pickle.load(f)
+
+
+
+#Input things
+account_number = st.text_input("Enter Your Account Number")
+full_name = st.text_input("Enter Your Full Name")
+Gender = st.selectbox("Select Your Gender*", ["Male", "Female"])
+Married = st.selectbox("Marital Status: Are You Married?*", ["Yes", "No"])
+Dependents = st.selectbox("Number of Dependents (Children/Family Members)*", ["0", "1", "2", "3+"], format_func=lambda x: x.replace("3+", "3 or more"))
+Education = st.selectbox("Highest Level of Education Achieved*", ["Graduate", "Not Graduate"])
+Self_Employed = st.selectbox("Employment Type: Are You Self-Employed?*", ["Yes", "No"])
+ApplicantIncome = st.number_input("Your Monthly Income (in $)", min_value=0)
+CoapplicantIncome = st.number_input("Co-applicant's Monthly Income (if any) (in $)", min_value=0.0)
+LoanAmount = st.number_input("Requested Loan Amount ($)", min_value=0.0)
+Loan_Amount_Term = st.number_input("Loan Repayment Period (Months)", min_value=0.0)
+Credit_History = st.selectbox("Credit History (1 = Good, 0 = Poor)*", [0.0, 1.0])
+Property_Area = st.selectbox("Choose Property Area Type*", ["Urban", "Rural", "Semiurban"])
 
 
 # Create a dictionary to map the user-friendly input to numerical values
 input_mapping = {
     "Gender": {"Male": 0.0, "Female": 1.0},
     "Married": {"Yes": 0.0, "No": 1.0},
-    "Dependents": {"0": 0.0, "1": 1.0, "2": 2.0, "3 or more": 3.0},
+    "Dependents": {"0": 0.0, "1": 1.0, "2": 2.0, "3+": 3.0},
     "Education": {"Graduate": 0.0, "Not Graduate": 1.0},
     "Self_Employed": {"Yes": 0.0, "No": 1.0},
     "Property_Area": {"Urban": 0, "Rural": 1, "Semiurban": 2}
@@ -148,20 +127,34 @@ if st.button("Check Your Loan Status", use_container_width=True):
         
         
 st.write('---')
-st.write('')       
+st.write('')     
 
-# with st.container():
-#     left_column, right_column = st.columns(2)
-#     with right_column:
 
-#         st.write('For inquiries or issues, reach me at:')
-#         st.info('[Visit My Website](https://sites.google.com/view/sheikhshakil)', icon="🔗")
-#         st.info('[Message on WhatsApp](https://wa.me/+8801601122081)', icon="📞")
+  
 
-#     with left_column:
-#         st_lottie(animation_contact, speed=1, height=200, key="third")  
-            
-        
+# # Divide the layout into two columns
+# left_col, right_col = st.columns([1, 2])
+
+# # Left column: Display your photo
+# with left_col:
+#     st.image("./img/ShakilPortrait.jpg", width=150)  # Replace "your_photo.jpg" with your actual photo file path
+#     st.write("Sheikh Shakil")  # Optional: Display your name below the photo
+
+# # Right column: LinkedIn and WhatsApp links
+# with right_col:
+#     st.write("## Connect with me")
+    
+#     # LinkedIn link
+#     linkedin_url = "https://www.linkedin.com/in/your-linkedin-profile"  # Replace with your LinkedIn profile link
+#     st.markdown(f"[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)]({linkedin_url})")
+    
+#     # WhatsApp link
+#     whatsapp_number = "your_phone_number"  # Replace with your WhatsApp phone number
+#     whatsapp_url = f"https://wa.me/{whatsapp_number}"  # Generates a direct link to WhatsApp
+#     st.markdown(f"[![WhatsApp](https://img.shields.io/badge/WhatsApp-Message-green)]({whatsapp_url})")
+    
+    
+    
         
         
 footer="""<style>
