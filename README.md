@@ -1,9 +1,8 @@
-# LoanWise: Loan Eligibility Prediction App
 
+
+![LoanWise-Logo](https://github.com/user-attachments/assets/7111a41b-9977-4488-8d96-4519a99d4c7f)
+# **LoanWise:** The Future of Loan Eligibility Verification
 LoanWise is a streamlined web app that predicts an applicant's loan eligibility based on provided financial and personal details. The app leverages machine learning to analyze multiple parameters, ensuring accurate and reliable loan eligibility assessments.
-
-![LoanWise-Logo](https://github.com/user-attachments/assets/89cdc472-6a10-4918-b972-c04cfc149e58)
-
 
 ## Features:-
 - **User-Friendly Interface:** Designed for ease of use with clear instructions and tooltips.
@@ -51,7 +50,7 @@ streamlit run loanwise.py
 
 ## Usage
 
-1**Input Applicant Information:**
+1 **Input Applicant Information:**
 - Enter fields such as Gender, Married Status, Income, and Loan Amount.
 
 2. **Submit for Prediction:**
