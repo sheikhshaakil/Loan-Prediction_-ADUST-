@@ -68,6 +68,12 @@ streamlit run loanwise.py
 2. Loan Eligibility Prediction Output
 ![image](https://github.com/user-attachments/assets/e5228204-7720-4209-819b-68b4444c0995)
 
+## Live App
+
+You can view the live app at the following link:  
+[LoanWise App](https://loan-wise.streamlit.app/)
+
+
 ## Model and Prediction Details
 - Model Type: The loan eligibility prediction is powered by a **Logistic Regression** model.
 - Model File: The model is saved as a `.pkl` file (`loan_prediction_model_LR.pkl`) and loaded into the app at runtime using Python’s `pickle` library.
