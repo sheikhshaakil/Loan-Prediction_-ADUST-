@@ -71,10 +71,7 @@ streamlit run loanwise.py
 
 ## 🚀 **Live App**
 
-- You can view the live app at the following link:
-**[LoanWise App](https://loan-wise.streamlit.app/)**  
-
-
+- You can view the live app at the following link: [![LoanWise App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://loan-wise.streamlit.app/)
 
 ## Model and Prediction Details
 - Model Type: The loan eligibility prediction is powered by a **Logistic Regression** model.
