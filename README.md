@@ -3,6 +3,7 @@
 ![LoanWise-Logo](https://github.com/user-attachments/assets/7111a41b-9977-4488-8d96-4519a99d4c7f)
 # **LoanWise:** The Future of Loan Eligibility Verification
 LoanWise is a streamlined web app that predicts an applicant's loan eligibility based on provided financial and personal details. The app leverages machine learning to analyze multiple parameters, ensuring accurate and reliable loan eligibility assessments.
+## [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new/sheikhshaakil/LoanWise-Prediction_App)
 
 ## Features
 - **User-Friendly Interface:** Designed for ease of use with clear instructions and tooltips.
@@ -27,7 +28,7 @@ Ensure you have the following installed:
 **Installation**
 1. Clone the repository:
  ```
-git clone https://github.com/yourusername/loanwise.git
+git clone https://github.com/sheikhshaakil/LoanWise-Prediction_App
  ```
 
 2. Navigate to the project directory:
