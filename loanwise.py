@@ -72,7 +72,7 @@ Self_Employed = st.selectbox("Employment Type: Are You Self-Employed?*", ["Yes",
 ApplicantIncome = st.number_input("Your Annual Income (in $)", min_value=0)
 CoapplicantIncome = st.number_input("Co-applicants Annual Income (if any) (in $)", min_value=0.0)
 LoanAmount = st.number_input("Requested Loan Amount ($)", min_value=0.0)
-Loan_Amount_Term = st.number_input("Loan Repayment Period (Months)", min_value=0.0)
+Loan_Amount_Term = st.number_input("Loan Payback Period (in Days)", min_value=0.0)
 Credit_History = st.selectbox("Credit History (1 = Good, 0 = Poor)*", [0.0, 1.0])
 Property_Area = st.selectbox("Choose Property Area Type*", ["Urban", "Rural", "Semiurban"])
 
